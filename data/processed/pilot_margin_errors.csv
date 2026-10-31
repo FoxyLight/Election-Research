@@ -1,10 +1,10 @@
 year,state,rcp_avg_margin_d_minus_r_pp,rcp_reported_result_margin_d_minus_r_pp,official_margin_d_minus_r_pp,reference_basis,avg_margin_error_pp,selected_poll_margin_d_minus_r_pp,selected_poll_error_pp
 2016,Pennsylvania,1.900,-0.700,,rcp_rounded_reference,2.600,-1.000,-0.300
-2016,Wisconsin,6.500,-0.700,,rcp_rounded_reference,7.200,6.000,6.700
+2016,Wisconsin,6.500,-0.700,-0.764,official_count,7.264,6.000,6.764
 2016,Georgia,-4.800,-5.100,,rcp_rounded_reference,0.300,-9.000,-3.900
 2020,Pennsylvania,1.200,1.200,1.165,official_count,0.035,5.000,3.835
-2020,Wisconsin,6.700,0.700,,rcp_rounded_reference,6.000,8.000,7.300
-2020,Georgia,-1.000,0.300,,rcp_rounded_reference,-1.300,-1.000,-1.300
+2020,Wisconsin,6.700,0.700,0.627,official_count,6.073,8.000,7.373
+2020,Georgia,-1.000,0.300,0.236,official_count,-1.236,-1.000,-1.236
 2024,Pennsylvania,-0.400,-1.700,-1.704,official_count,1.304,-1.000,0.704
 2024,Wisconsin,0.400,-0.900,-0.859,official_count,1.259,0.000,0.859
 2024,Georgia,-1.300,-2.200,-2.192,official_count,0.892,-1.000,1.192
