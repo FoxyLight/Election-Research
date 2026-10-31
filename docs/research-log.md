@@ -1,0 +1,15 @@
+# Research log
+
+## 2026-10-31 — Phase 1 initial source assessment
+
+**Request:** Start source investigation and establish the authoritative research record in `FoxyLight/Election-Research`; investigate presidential general-election polls 2000–2024, with recurring/geographic error as a major priority. Do not begin full analysis.
+
+**Checked:** GitHub repository was empty at the start. Reviewed FEC federal-election-result index; MIT Election Lab portal and external Dataverse catalogue; FiveThirtyEight `polls/`, `pollster-ratings/`, and `state-of-the-polls-2024/` READMEs; RealClearPolling historical archive; Roper Center iPoll access description; AAPOR polling accuracy pages and 2024 code repository.
+
+**Findings:** Official results are readily indexed for all seven presidential cycles. Public polling archive indexes exist, but true poll-level coverage (especially 2000–2008), uniform final-window availability, exact current download access and methodological metadata remain unverified. Roper full-study access can be restricted. FiveThirtyEight's 2024 comparative archive explicitly excludes the last 14 days (uses 15–180 days before Election Day), so it is not a complete final-poll source.
+
+**Limitations:** No historical comparison file was downloaded, parsed, cleaned or statistically analyzed. The Harvard Dataverse site and certain CSV URLs could not be retrieved through the research web interface. AAPOR's public 2024 GitHub code was located, but full promised replication CSVs were not confirmed.
+
+**Documentation created:** README and Phase 1 source inventory, assessment and hypotheses register.
+
+**Next activity:** Execute a small file-level acquisition/schema pilot for 2016, 2020, 2024 and matching official returns; document duplicates, field-date cutoffs and candidate/denominator mapping before finalizing methods.
