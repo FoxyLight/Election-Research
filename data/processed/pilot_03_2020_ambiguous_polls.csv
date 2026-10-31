@@ -1,0 +1,7 @@
+state,poll_id,candidate_question_ids,top_population,top_candidate_margins,reason
+GA,72146,135281|135282,lv,4.00|2.00,multiple equal-priority questions; do not choose by signed margin
+PA,71976,134925|134926,lv,5.00|7.00,multiple equal-priority questions; do not choose by signed margin
+PA,72507,136069|136070,lv,6.00|6.00,multiple equal-priority questions; do not choose by signed margin
+PA,72599,136265|136266,lv,7.00|5.00,multiple equal-priority questions; do not choose by signed margin
+WI,71975,134924|134927,lv,9.00|9.00,multiple equal-priority questions; do not choose by signed margin
+WI,72505,136066|136067,lv,8.00|10.00,multiple equal-priority questions; do not choose by signed margin
