@@ -1,0 +1,10 @@
+year,state,presidential_question_poll_records,tracking_records,earliest_field_end,latest_field_end,provider_window_days_before_election,upstream_git_blob_sha,upstream_file_url
+2016,GA,48,10,2016-05-12,2016-10-20,15-180,aab9ab74e9e29b086a7700499a5284a259a3c4f9,https://github.com/fivethirtyeight/data/blob/master/state-of-the-polls-2024/2016_polls.csv
+2016,PA,68,12,2016-06-05,2016-10-23,15-180,aab9ab74e9e29b086a7700499a5284a259a3c4f9,https://github.com/fivethirtyeight/data/blob/master/state-of-the-polls-2024/2016_polls.csv
+2016,WI,46,10,2016-05-12,2016-10-22,15-180,aab9ab74e9e29b086a7700499a5284a259a3c4f9,https://github.com/fivethirtyeight/data/blob/master/state-of-the-polls-2024/2016_polls.csv
+2020,GA,59,14,2020-05-07,2020-10-18,15-180,43e8b5beb864359fd6f3e4bd1561f015bd7074e3,https://github.com/fivethirtyeight/data/blob/master/state-of-the-polls-2024/2020_polls.csv
+2020,PA,99,14,2020-05-13,2020-10-18,15-180,43e8b5beb864359fd6f3e4bd1561f015bd7074e3,https://github.com/fivethirtyeight/data/blob/master/state-of-the-polls-2024/2020_polls.csv
+2020,WI,216,141,2020-05-07,2020-10-18,15-180,43e8b5beb864359fd6f3e4bd1561f015bd7074e3,https://github.com/fivethirtyeight/data/blob/master/state-of-the-polls-2024/2020_polls.csv
+2024,GA,84,0,2024-05-09,2024-10-20,15-180,1d9f5565079c93217ff92f897da2da051ba15499,https://github.com/fivethirtyeight/data/blob/master/state-of-the-polls-2024/2024_polls.csv
+2024,PA,124,0,2024-05-09,2024-10-20,15-180,1d9f5565079c93217ff92f897da2da051ba15499,https://github.com/fivethirtyeight/data/blob/master/state-of-the-polls-2024/2024_polls.csv
+2024,WI,96,0,2024-05-09,2024-10-20,15-180,1d9f5565079c93217ff92f897da2da051ba15499,https://github.com/fivethirtyeight/data/blob/master/state-of-the-polls-2024/2024_polls.csv
