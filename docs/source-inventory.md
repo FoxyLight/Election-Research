@@ -43,3 +43,11 @@ Record URL, publisher, download timestamp (UTC), file version/hash, data license
 - **Pennsylvania 2020 official record**: [Department of State fact-check page](https://www.pa.gov/agencies/vote/elections/fact-checking-pa-related-election-claims) explicitly gives certified candidate totals and 6,915,283 total presidential votes. **Verified numerical observations.**
 
 See [Pilot 01](pilot-01.md) for provenance and gaps. RCP's retrospective `Final Results` row is *not* an acceptable permanent substitute for official counts; check denominator differences before producing aggregate historical statistics.
+
+### National Archives certificates verified in Pilot 01
+
+- [Wisconsin 2016 Certificate of Ascertainment](https://www.archives.gov/files/electoral-college/2016/ascertainment-wisconsin.pdf): certified total presidential votes 2,976,150, Democratic 1,382,536, Republican 1,405,284.
+- [Wisconsin 2020 Certificate of Ascertainment](https://www.archives.gov/files/electoral-college/2020/ascertainment-wisconsin.pdf): certified total presidential votes 3,298,041, Democratic 1,630,866, Republican 1,610,184.
+- [Georgia 2020 amended Certificate of Ascertainment](https://www.archives.gov/files/electoral-college/2020/ascertainment-georgia.pdf): first page is the **amended/re-certified** result (Democratic 2,473,633, Republican 2,461,854, Libertarian 62,229); second page preserves earlier **superseded** certification and should not be used as the final result. The three candidate totals sum to 4,997,716 presidential votes. Certificate pages inspected visually.
+
+**Remaining official-count gaps:** Georgia and Pennsylvania 2016. An elector certificate may omit minor-party write-ins from a summed denominator; obtain a definitive all-votes tally before filling those records. The three additions increase independently checked official-count rows from **4/9 to 7/9**.
