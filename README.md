@@ -2,7 +2,7 @@
 
 An evidence-based, politically neutral investigation of how U.S. election polls compare with actual election returns, emphasizing historical error, geographic patterns, and recurrence across election cycles.
 
-**Authoritative research record:** this repository. **Initial scope:** U.S. presidential general elections, 2000–2024. **As of:** 2026-10-31. **Current stage:** Phase 1, source investigation and feasibility assessment. No historical polling-error calculations have been performed here yet.
+**Authoritative research record:** this repository. **Initial scope:** U.S. presidential general elections, 2000–2024. **As of:** 2026-10-31. **Current stage:** Narrow Pilot 01 acquired and partially validated after Phase 1; full analysis not started. No historical polling-error calculations have been performed here yet.
 
 ## Questions
 
@@ -32,5 +32,5 @@ This project is exploratory: hypotheses may be revised or rejected as evidence d
 - [Nine state-year pilot report](docs/pilot-01.md), including sources, comparisons and unresolved official-return coverage.
 - [Nine RCP final-average observations](data/processed/pilot_rcp_state_averages.csv) and [nine illustrative individual poll entries](data/processed/pilot_selected_polls.csv).
 - [Derived comparison CSV](data/processed/pilot_margin_errors.csv) and [recalculation script](analysis/pilot_accuracy.py).
-- **Status:** PARTIAL PASS for archive extraction, joins and initial margin calculations. Exact certified vote totals independently checked for 2020 Pennsylvania and all three 2024 pilot states; five state-years still use rounded archive-reported outcome percentages as provisional comparison values.
+- **Status:** PARTIAL PASS for archive extraction, joins and initial margin calculations. Exact official vote totals independently checked for seven state-years (2016 WI; 2020 GA, PA, WI; 2024 GA, PA, WI); **two 2016 state-years, Georgia and Pennsylvania, still use rounded archive-reported results as provisional comparison values**.
 - **Important:** these nine state-years and nine hand-selected polls are *not* representative observations. Do not infer nationwide accuracy or election-to-election persistence from them. The complete original poll CSV acquisition has not been verified.
