@@ -1,0 +1,10 @@
+year,state,avg_first_field_date,avg_last_field_date,rcp_avg_dem_pct,rcp_avg_rep_pct,rcp_final_dem_pct,rcp_final_rep_pct,rcp_archive_url,certified_dem_votes,certified_rep_votes,certified_total_pres_votes,official_results_url,retrieved_utc_date
+2016,Pennsylvania,2016-10-29,2016-11-05,46.2,44.3,47.5,48.2,https://www.realclearpolitics.com/epolls/2016/president/2016StateFinalResults.html,,,,,2026-10-31
+2016,Wisconsin,2016-10-26,2016-11-02,46.8,40.3,46.5,47.2,https://www.realclearpolitics.com/epolls/2016/president/2016StateFinalResults.html,,,,,2026-10-31
+2016,Georgia,2016-10-29,2016-11-06,44.4,49.2,45.4,50.5,https://www.realclearpolitics.com/epolls/2016/president/2016StateFinalResults.html,,,,,2026-10-31
+2020,Pennsylvania,2020-10-29,2020-11-02,48.7,47.5,50.0,48.8,https://www.realclearpolitics.com/epolls/2020/president/Pennsylvania.html,3458229,3377674,6915283,https://www.pa.gov/agencies/vote/elections/fact-checking-pa-related-election-claims,2026-10-31
+2020,Wisconsin,2020-10-21,2020-11-01,51.0,44.3,49.6,48.9,https://www.realclearpolitics.com/epolls/2020/president/Wisconsin.html,,,,,2026-10-31
+2020,Georgia,2020-10-23,2020-11-02,47.2,48.2,49.5,49.2,https://www.realclearpolitics.com/epolls/2020/president/Georgia.html,,,,,2026-10-31
+2024,Pennsylvania,2024-10-18,2024-11-04,48.1,48.5,48.7,50.4,https://www.realclearpolling.com/polls/battlegrounds/2024,3423042,3543308,7058732,https://www.fec.gov/documents/5644/2024presgeresults.pdf,2026-10-31
+2024,Wisconsin,2024-10-16,2024-11-04,48.6,48.2,48.7,49.6,https://www.realclearpolling.com/polls/battlegrounds/2024,1668229,1697626,3422918,https://www.fec.gov/documents/5644/2024presgeresults.pdf,2026-10-31
+2024,Georgia,2024-10-20,2024-11-04,47.8,49.1,48.5,50.7,https://www.realclearpolling.com/polls/battlegrounds/2024,2548017,2663117,5250905,https://www.fec.gov/documents/5644/2024presgeresults.pdf,2026-10-31
