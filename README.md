@@ -2,7 +2,7 @@
 
 An evidence-based, politically neutral investigation of how U.S. election polls compare with actual election returns, emphasizing historical error, geographic patterns, and recurrence across election cycles.
 
-**Authoritative research record:** this repository. **Initial scope:** U.S. presidential general elections, 2000–2024. **As of:** 2026-10-31. **Current stage:** Pilot 03 partial pass (2026-10-31). Final-14-day archive polling entries now acquired for pilot states in 2016, 2020, 2024, but **source-selection and question-level comparability are unresolved**. Official results verified in all 9 state-years. No national trend or statistical hypothesis tests have begun.
+**Authoritative research record:** this repository. **Initial scope:** U.S. presidential general elections, 2000–2024. **As of:** 2026-10-31. **Current stage:** Pilot 04 partial pass (2026-10-31). Original-report checks and 2020 tracking-wave overlap audits are documented; a validated common-source poll universe for 2016/2020/2024 is **still missing**. Official results verified for 9/9 pilot state-years. No cross-cycle statistical inference or H1–H6 tests have begun.
 
 ## Questions
 
@@ -24,7 +24,7 @@ Distinguish poll measurements from polling averages and probabilistic election f
 
 ## Current next step
 
-Pilot 04: **validate the question selection against more original pollster reports, resolve source discrepancies, seek a comparable three-cycle polling universe, and run local audit scripts**. The acquired 2016/2024 records are curated secondary archive entries, not equivalents of the 2020 question-level dataset.
+**Pilot 05: locate versioned, final-window question-level data consistently covering 2016, 2020, 2024**, ideally the original 538 historical files or downloadable AAPOR cleaned data; validate candidate/question/field-date identifiers across cycles, and define tracking-family and source-completeness rules before modeling errors.
 
 
 This project is exploratory: hypotheses may be revised or rejected as evidence develops.
@@ -49,3 +49,11 @@ This project is exploratory: hypotheses may be revised or rejected as evidence d
 - [2020 question-level extract](data/processed/pilot_2020_final14_paired_questions.csv): **175 paired questions** from 121 state-specific poll IDs. **115** unique top-tier [provisional survey records](data/processed/pilot_03_2020_unique_poll_provisional.csv); **6** [ambiguous poll groups](data/processed/pilot_03_2020_ambiguous_polls.csv) excluded, not arbitrarily resolved.
 - Original source checks for 2016 WI Marquette, 2020 WI Marquette, and 2024 GA ECU, PA Marist, WI Marist. Unresolved 2016 Marquette sample-count and 2024 Emerson poll-share discrepancies are documented, not silently reconciled.
 - **Caution:** Archive coverage, polling-question variants, tracking overlap and independence are not established across cycles. These extracts do **not** support cross-cycle significance or persistent geographic-bias claims. A deterministic independent consistency check of the GitHub CSVs passed; the committed Python Pilot 03 validator still needs a local checkout execution.
+
+## Pilot 04: independence warnings and audit gate (2026-10-31)
+
+- [Full Pilot 04 report](docs/pilot-04.md); [data-integrity methodology v0.3](docs/methodology-v0.3.md). **Status: PARTIAL PASS / inferential HOLD**.
+- [115-record 2020 dependency audit](data/processed/pilot04_2020_poll_dependency_audit.csv) and [200 overlapping-fieldwork pairs](data/processed/pilot04_2020_overlap_pairs.csv), with a [Python verification script](analysis/pilot04_overlap_audit.py). **52** selected polling records begin >14 days before election; **40** distinct survey IDs participate in at least one same-pollster/state overlap; **42** are source-flagged tracking, **73** have a missing tracking flag.
+- [13 primary-source crosschecks](data/processed/pilot04_primary_source_check_register.csv): confirms different likely-voter turnout models in two 2020 Monmouth polls, and documents 2016 Marquette sample count and 2024 Wisconsin Emerson percentages without inventing a reconciliation.
+- [GitHub Actions validation workflow](.github/workflows/validate-research.yml) committed to run Python checks on code/data pushes; **the workflow's hosted run status was not accessible here**. Source-level overlap and consistency calculations were executed independently through the connected data-processing tools.
+- **No validated uniform three-cycle question-level polling source yet**. The AAPOR research repository contains helpful scripts but the needed complete cleaned survey file was not found there; the fiveThirtyEight original post-election historical archive remains a research target.
