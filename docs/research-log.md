@@ -33,3 +33,15 @@ Reviewed Wisconsin's 2016 and 2020 presidential certificates and Georgia's amend
 ## 2026-10-31 — Pilot 01 source discrepancy identified
 
 A Georgia SOS 2016 official statewide summary prints 4,092,373 votes across three named presidential candidates, while historical compilations show other totals when including different write-in or other candidate categories (4,146,825 in the election atlas; 4,114,732 in Ballotpedia). The 2016 Georgia National Archives Certificate of Ascertainment certifies the three named candidate counts but not all write-ins. **No denominator chosen yet; 2016 GA and PA remain provisional.** This is a data-definition issue, not an inference of irregularity. Full provenance and source links in [Pilot 01](pilot-01.md).
+
+## 2026-10-31 — Pilot 02: official denominator resolution and file-level acquisition
+
+**Official outcomes:** U.S. House Clerk original PDF recapitulation pages inspected for Georgia and Pennsylvania 2016. GA: D 1,877,963, R 2,089,104, other 147,665, total **4,114,732** including **22,359 write-ins**. PA: D 2,926,441, R 2,970,733, other 218,228, total **6,115,402**. All **9/9** pilot state-years now have independently referenced official published totals. The historical 4,146,825 GA alternative is not used because it follows a different compilation convention; no inference about election irregularity.
+
+**Reproducibility:** Exact GitHub Python script and pilot CSV input blob hashes verified in a local directory; `python analysis/pilot_accuracy.py --write` generated the **same Git blob SHA** as committed derived comparison CSV. Six standard-library regression tests executed, **6/6 pass**. Tests committed to `analysis/test_pilot_accuracy.py`.
+
+**Poll-file acquisition:** Retrieved complete 2016, 2020, 2024 FiveThirtyEight `state-of-the-polls-2024` **metadata-only** CSV files, and committed unchanged under `data/raw/fivethirtyeight/` with source hashes, size and CC BY 4.0 attribution. Per-state metadata records and tracking counts computed, saved to `data/processed/pilot_538_metadata_coverage.csv`. They end **15–180 days** before Election Day and lack candidate shares. Companion audit Python script source was compiled locally; full-file Python execution remains to be independently run in a checkout.
+
+**Blocked source:** original final-week vote-share poll CSVs are not yet extracted across all three cycles. Big 538 pollster-rating raw files exceed the file-content tool's read limit; old hosted CSV URLs failed this session.
+
+**Decision:** Freeze only signed error and outcome denominator/candidate-share preservation conventions; keep final-14-day field-end cutoff, poll-question matching and de-duplication rules **provisional** until we can inspect a real final-window poll dataset. See [Pilot 02](pilot-02.md) and [Methodology v0.1](methodology-v0.1.md). No H1–H6 test.
