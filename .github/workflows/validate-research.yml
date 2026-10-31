@@ -1,0 +1,32 @@
+name: Research data validation
+
+on:
+  push:
+    paths:
+      - 'analysis/**'
+      - 'data/**'
+      - '.github/workflows/validate-research.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate research datasets and scripts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact committed files
+        uses: actions/checkout@v4
+      - name: Python runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate historical source and calculations
+        run: |
+          python analysis/pilot_accuracy.py
+          python -m unittest discover -s analysis -p 'test_*.py' -v
+          python analysis/pilot_03_validate.py
+          python analysis/audit_538_metadata.py
+          python analysis/pilot04_overlap_audit.py --check
