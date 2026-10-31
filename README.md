@@ -2,7 +2,7 @@
 
 An evidence-based, politically neutral investigation of how U.S. election polls compare with actual election returns, emphasizing historical error, geographic patterns, and recurrence across election cycles.
 
-**Authoritative research record:** this repository. **Initial scope:** U.S. presidential general elections, 2000–2024. **As of:** 2026-10-31. **Current stage:** Pilot 02 outcome reconciliation and a limited poll-metadata archive audit. All nine official outcome references validated; comprehensive final-week candidate-level polling acquisition remains open. No historical polling-error calculations have been performed here yet.
+**Authoritative research record:** this repository. **Initial scope:** U.S. presidential general elections, 2000–2024. **As of:** 2026-10-31. **Current stage:** Pilot 02 completed the nine official-outcome references and acquired a question-level 2020 final-two-week polling extract. Equivalent 2016 and 2024 polling extracts and the full historical study remain open. Only nine illustrative RCP average-margin comparisons have been computed; no full historical trend or inferential analysis has been performed.
 
 ## Questions
 
@@ -24,7 +24,7 @@ Distinguish poll measurements from polling averages and probabilistic election f
 
 ## Current next step
 
-Acquire and validate **machine-readable, final-two-week individual poll vote-share data** for 2016/2020/2024. The three archival FiveThirtyEight metadata CSVs from 15–180 days before Election Day cannot substitute for the needed candidate-preference estimates.
+Complete additional original-poll verification and run the source-reconstruction script for the **2020** final-14-day candidate-question extract; acquire comparable **2016 and 2024** final-14-day vote-share sources. FiveThirtyEight's separate 15–180-day metadata archive cannot substitute for this.
 
 
 This project is exploratory: hypotheses may be revised or rejected as evidence develops.
@@ -35,7 +35,8 @@ This project is exploratory: hypotheses may be revised or rejected as evidence d
 - [Pilot comparisons](data/processed/pilot_margin_errors.csv) regenerated **exactly** by [the local Python script](analysis/pilot_accuracy.py). [Six regression checks](analysis/test_pilot_accuracy.py) passed.
 - Original FiveThirtyEight [2016, 2020 and 2024 15–180-day polling metadata files](data/raw/fivethirtyeight/state-of-the-polls-2024/README.md) copied unchanged with Git blob hashes matched to upstream; they contain **no candidate vote shares and no final 14-day surveys**.
 - [Metadata availability audit](data/processed/pilot_538_metadata_coverage.csv) and [reproducibility script](analysis/audit_538_metadata.py) (latter source-compiled, not run locally against full archived raw inputs in this session).
-- **Research gate:** do not infer polling accuracy trends or test persistent geographic bias from these illustrative nine cases; acquire candidate-level end-of-campaign polls first.
+- **Additional acquisition:** [2020 final-fourteen-day paired question dataset](data/processed/pilot_2020_final14_paired_questions.csv) contains **175 Biden/Trump question pairs** across Georgia, Pennsylvania and Wisconsin, representing **121 state-specific distinct poll IDs**, with population and field dates. [Source and original-poll audit](docs/pilot-02-poll-data-addendum.md), [reproduction recipe](analysis/extract_2020_final14_pairs.py). This is a 2020-only sample of an archive, not 175 independent surveys; full integrity checking remains open.
+- **Research gate:** do not infer polling accuracy trends or test persistent geographic bias from these illustrative nine cases or the unweighted question-level 2020 extract. Historical poll-level 2016 and 2024 data remain missing.
 
 ## Pilot 01 historical record
 
