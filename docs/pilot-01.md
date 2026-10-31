@@ -1,7 +1,7 @@
 # Pilot 01 — nine state-year polling comparisons
 
 **Date:** 2026-10-31  
-**Status:** Data transcribed and joined; independent vote totals verified for four of nine state-years; a complete raw poll-level download remains blocked. **This is an acquisition/matching pilot, not a representative accuracy study.**
+**Status:** Data transcribed and joined; independent vote totals verified for seven of nine state-years; a complete raw poll-level download remains blocked. **This is an acquisition/matching pilot, not a representative accuracy study.**
 
 ## Objective and bounded design
 
@@ -24,10 +24,13 @@ The nine average and poll rows were manually transcribed from the linked source 
 - 2020 archives: [Georgia](https://www.realclearpolitics.com/epolls/2020/president/Georgia.html), [Pennsylvania](https://www.realclearpolitics.com/epolls/2020/president/Pennsylvania.html), [Wisconsin](https://www.realclearpolitics.com/epolls/2020/president/Wisconsin.html).
 - 2024 averages, reported election percentages and selected polls: [RCP 2024 battleground tables](https://www.realclearpolling.com/polls/battlegrounds/2024).
 - Official 2024 vote counts and statewide presidential vote denominators, all three states: [FEC compiled 2024 presidential returns, pp. 3, 5 and 6](https://www.fec.gov/documents/5644/2024presgeresults.pdf); these pages were inspected visually.
+- Official 2016 Wisconsin vote totals: [Wisconsin 2016 Certificate of Ascertainment](https://www.archives.gov/files/electoral-college/2016/ascertainment-wisconsin.pdf). 2,976,150 presidential votes; Clinton 1,382,536; Trump 1,405,284. Certificate visually inspected.
+- Official 2020 Wisconsin vote totals: [Wisconsin 2020 Certificate of Ascertainment](https://www.archives.gov/files/electoral-college/2020/ascertainment-wisconsin.pdf). 3,298,041 presidential votes; Biden 1,630,866; Trump 1,610,184. Certificate visually inspected.
+- Official 2020 Georgia vote totals: [Georgia 2020 amended Certificate of Ascertainment](https://www.archives.gov/files/electoral-college/2020/ascertainment-georgia.pdf), **first page (amendment and re-certification), not the earlier second-page certificate**. Biden's electors 2,473,633, Trump's electors 2,461,854, Libertarian electors 62,229, yielding total 4,997,716. Both pages visually inspected; the earlier superseded certificate contains different counts.
 - Official 2020 Pennsylvania counts: [Pennsylvania Department of State, 2020 certified presidential total](https://www.pa.gov/agencies/vote/elections/fact-checking-pa-related-election-claims). It reports Biden 3,458,229; Trump 3,377,674; Jorgensen 79,380; **6,915,283 presidential votes**.
 - Official 2024 Pennsylvania major-candidate totals are also independently stated in the [Pennsylvania certification notice](https://www.pa.gov/agencies/dos/newsroom/governor-shapiro-certifies-2024-presidential-election-results).
 
-**Validation boundary:** Exact certified vote counts have been independently inspected for **2020 PA and 2024 GA, PA, WI only**. The remaining five state-years use RCP's own rounded "Final Results" percentage row as an **archive-reported provisional comparator**, not a verified full-denominator official return. Before a real longitudinal comparison, fill these rows from official canvasses and recalculate.
+**Validation boundary:** Exact official presidential vote counts and denominators have been independently inspected for **2016 WI; 2020 GA, PA, WI; and 2024 GA, PA, WI** (seven rows). The remaining **two** state-years, **2016 GA and PA**, use RCP's own rounded "Final Results" percentage row as an **archive-reported provisional comparator**, not a verified full-denominator official return. Before a real longitudinal comparison, fill these rows from official canvasses and recalculate.
 
 ## Metrics
 
@@ -47,11 +50,11 @@ Rounded to three decimal places. Differences in the lower rows may diverge sligh
 | Year | State | RCP avg D−R | Reference D−R | Reference source | Signed error (pp) |
 | ---: | --- | ---: | ---: | --- | ---: |
 | 2016 | Pennsylvania | +1.900 | −0.700 | RCP rounded | +2.600 |
-| 2016 | Wisconsin | +6.500 | −0.700 | RCP rounded | +7.200 |
+| 2016 | Wisconsin | +6.500 | −0.764 | State-certified counts | +7.264 |
 | 2016 | Georgia | −4.800 | −5.100 | RCP rounded | +0.300 |
 | 2020 | Pennsylvania | +1.200 | +1.165 | State-certified counts | +0.035 |
-| 2020 | Wisconsin | +6.700 | +0.700 | RCP rounded | +6.000 |
-| 2020 | Georgia | −1.000 | +0.300 | RCP rounded | −1.300 |
+| 2020 | Wisconsin | +6.700 | +0.627 | State-certified counts | +6.073 |
+| 2020 | Georgia | −1.000 | +0.236 | Amended state-certified counts | −1.236 |
 | 2024 | Pennsylvania | −0.400 | −1.704 | FEC-certified counts | +1.304 |
 | 2024 | Wisconsin | +0.400 | −0.859 | FEC-certified counts | +1.259 |
 | 2024 | Georgia | −1.300 | −2.192 | FEC-certified counts | +0.892 |
@@ -86,8 +89,12 @@ A key source trap remains: FiveThirtyEight's "State of the Polls 2024" dataset i
 
 **Pilot status: PARTIAL PASS (archive matching and arithmetic); open for official result coverage and original poll-file retrieval.**
 
-1. Replace the five provisional RCP rounded result references with **independently sourced official certified candidate counts and all-presidential-vote totals** for 2016 GA/PA/WI and 2020 GA/WI; validate that the FEC and state results agree.
+1. Replace the **two** remaining provisional RCP rounded result references with **independently sourced official certified candidate counts and full presidential-vote totals** for **2016 Georgia and Pennsylvania**. The 2016 Pennsylvania elector certificate provides major-candidate counts but not necessarily the complete presidential-vote denominator (write-ins require separate verification). Confirm 2020 Georgia uses the **amended** certificate, not the superseded one.
 2. Attempt authenticated/licensed access or a permitted download tool for complete **2016, 2020 and 2024 individual-poll records** with poll/question IDs and documented candidate, date, sample and methodology fields.
 3. Re-run `python analysis/pilot_accuracy.py --write` and confirm output matches the committed derived CSV after any changes.
 4. Freeze candidate handling and the **final-14-day inclusion rule**, plus poll deduplication and tracking rules, before scaling.
 5. Only then design representative sampling and data-quality sensitivity checks. Do **not** label the pilot's nine chosen records as estimates for all states.
+
+## Pilot 01 correction and source-validation addendum (2026-10-31)
+
+The initial four independently checked official result rows were expanded to **seven of nine** by visually examining National Archives copies of 2016 Wisconsin and 2020 Wisconsin/Georgia state certifications. Georgia's National Archives file contains both an **amended December 7 certification on page 1** and an **earlier November 20 certification on page 2**; the amended counts, not the earlier figures, are recorded. The data CSV and derived-error CSV have been amended accordingly. Two 2016 states still use provisional archive result percentages. The added official rows change the exact comparison errors slightly; the source-provenance column records each certificate URL.
