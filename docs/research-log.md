@@ -29,3 +29,7 @@
 ## 2026-10-31 — Pilot 01 source-validation addendum
 
 Reviewed Wisconsin's 2016 and 2020 presidential certificates and Georgia's amended December 7, 2020 certificate (including the superseded Georgia certificate in the same PDF). Backfilled three official result rows (2016 WI, 2020 WI, 2020 GA) and recomputed the affected margin errors. **Now 7/9 pilot results use official-count denominators; 2016 GA/PA remain provisional.** Source URLs and changed data live in the pilot average and derived-error CSVs. The repo contains a recalculation Python script, but it has not yet been executed through a local checkout. See [Pilot 01](pilot-01.md).
+
+## 2026-10-31 — Pilot 01 source discrepancy identified
+
+A Georgia SOS 2016 official statewide summary prints 4,092,373 votes across three named presidential candidates, while historical compilations show other totals when including different write-in or other candidate categories (4,146,825 in the election atlas; 4,114,732 in Ballotpedia). The 2016 Georgia National Archives Certificate of Ascertainment certifies the three named candidate counts but not all write-ins. **No denominator chosen yet; 2016 GA and PA remain provisional.** This is a data-definition issue, not an inference of irregularity. Full provenance and source links in [Pilot 01](pilot-01.md).
