@@ -32,3 +32,11 @@ Require a substantial, machine-readable **final-window candidate-share** poll ex
 - Six local regression tests passed (including invalid dates, duplicate state-year selected poll keys, and incomplete vote totals); tests committed to `analysis/test_pilot_accuracy.py`.
 - Three FiveThirtyEight 2016/2020/2024 **metadata-only** CSV archives copied to `data/raw/`; their upstream and destination Git blob hashes match. The 15–180-day scope excludes the proposed primary final-fourteen-day window.
 - No broad statistical hypothesis test has been conducted.
+
+## 2026-10-31 Pilot 02 end-of-window acquisition update
+
+A [2020 paired-question extract](../data/processed/pilot_2020_final14_paired_questions.csv) from the historical [FiveThirtyEight mirror](https://github.com/simonw/fivethirtyeight-polls) contains **175** unique matched Democratic and Republican question IDs in Pennsylvania, Wisconsin and Georgia, whose survey **end date** was 1–14 days before 2020 election day (inclusive). It is not a source for 2016 or 2024 end-of-campaign surveys. Source and poll identifiers, candidate names, LV/RV populations, dates, pollster, sample size and original survey URLs are preserved. Fourteen question pairs have missing method classification; do not guess.
+
+The 2020 pilot includes **multiple questions/populations per poll** (175 question IDs from 121 state-specific poll IDs), notably verified Marquette LV and RV figures. Until a nonarbitrary predeclared **one observation per poll** selection rule and tracking-poll handling are established, this file must **not** be used to claim an independent-poll error distribution. A source-specific field-end 1–14-day criterion worked in this pilot, but applying an identical window across all 2000–2024 sources remains proposed rather than frozen. Additional primary-source spot checks and 2016/2024 file-level acquisition are still required.
+
+Full [acquisition and original poll spot-check documentation](pilot-02-poll-data-addendum.md). No inferential statistical hypotheses have been tested.
