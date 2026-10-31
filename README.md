@@ -2,7 +2,7 @@
 
 An evidence-based, politically neutral investigation of how U.S. election polls compare with actual election returns, emphasizing historical error, geographic patterns, and recurrence across election cycles.
 
-**Authoritative research record:** this repository. **Initial scope:** U.S. presidential general elections, 2000–2024. **As of:** 2026-10-31. **Current stage:** Pilot 02 completed the nine official-outcome references and acquired a question-level 2020 final-two-week polling extract. Equivalent 2016 and 2024 polling extracts and the full historical study remain open. Only nine illustrative RCP average-margin comparisons have been computed; no full historical trend or inferential analysis has been performed.
+**Authoritative research record:** this repository. **Initial scope:** U.S. presidential general elections, 2000–2024. **As of:** 2026-10-31. **Current stage:** Pilot 03 partial pass (2026-10-31). Final-14-day archive polling entries now acquired for pilot states in 2016, 2020, 2024, but **source-selection and question-level comparability are unresolved**. Official results verified in all 9 state-years. No national trend or statistical hypothesis tests have begun.
 
 ## Questions
 
@@ -24,7 +24,7 @@ Distinguish poll measurements from polling averages and probabilistic election f
 
 ## Current next step
 
-Complete additional original-poll verification and run the source-reconstruction script for the **2020** final-14-day candidate-question extract; acquire comparable **2016 and 2024** final-14-day vote-share sources. FiveThirtyEight's separate 15–180-day metadata archive cannot substitute for this.
+Pilot 04: **validate the question selection against more original pollster reports, resolve source discrepancies, seek a comparable three-cycle polling universe, and run local audit scripts**. The acquired 2016/2024 records are curated secondary archive entries, not equivalents of the 2020 question-level dataset.
 
 
 This project is exploratory: hypotheses may be revised or rejected as evidence develops.
@@ -41,3 +41,11 @@ This project is exploratory: hypotheses may be revised or rejected as evidence d
 ## Pilot 01 historical record
 
 [Pilot 01](docs/pilot-01.md) documented the initial nine-state-year source comparison and found official-outcome gaps. The Pilot 02 report supersedes its provisional figures; old status notes remain in the dated research log for audit history.
+
+## Pilot 03: final-window pilot, source checks and duplicate triage (2026-10-31)
+
+- [Pilot 03 report](docs/pilot-03.md), [provisional methodology v0.2](docs/methodology-v0.2.md), and [offline validation script](analysis/pilot_03_validate.py).
+- [2016/2024 archive extract](data/processed/pilot_03_2016_2024_final14_archive_polls.csv): **54 records** (15 in 2016, 39 in 2024) across GA, PA, WI.
+- [2020 question-level extract](data/processed/pilot_2020_final14_paired_questions.csv): **175 paired questions** from 121 state-specific poll IDs. **115** unique top-tier [provisional survey records](data/processed/pilot_03_2020_unique_poll_provisional.csv); **6** [ambiguous poll groups](data/processed/pilot_03_2020_ambiguous_polls.csv) excluded, not arbitrarily resolved.
+- Original source checks for 2016 WI Marquette, 2020 WI Marquette, and 2024 GA ECU, PA Marist, WI Marist. Unresolved 2016 Marquette sample-count and 2024 Emerson poll-share discrepancies are documented, not silently reconciled.
+- **Caution:** Archive coverage, polling-question variants, tracking overlap and independence are not established across cycles. These extracts do **not** support cross-cycle significance or persistent geographic-bias claims. A deterministic independent consistency check of the GitHub CSVs passed; the committed Python Pilot 03 validator still needs a local checkout execution.
