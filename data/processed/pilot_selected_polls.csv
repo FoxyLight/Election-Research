@@ -1,0 +1,10 @@
+year,state,pollster_rcp_label,field_start,field_end,dem_pct,rep_pct,reported_sample_n,reported_population,rcp_archive_url,retrieved_utc_date
+2016,Pennsylvania,Trafalgar Group (R),2016-11-03,2016-11-05,47,48,1300,LV,https://www.realclearpolitics.com/epolls/2016/president/2016StateFinalResults.html,2026-10-31
+2016,Wisconsin,Marquette,2016-10-26,2016-10-31,46,40,1225,LV,https://www.realclearpolitics.com/epolls/2016/president/2016StateFinalResults.html,2026-10-31
+2016,Georgia,Emerson,2016-10-29,2016-10-31,42,51,650,LV,https://www.realclearpolitics.com/epolls/2016/president/2016StateFinalResults.html,2026-10-31
+2020,Pennsylvania,NBC News/Marist,2020-10-29,2020-11-01,51,46,772,LV,https://www.realclearpolitics.com/epolls/2020/president/Pennsylvania.html,2026-10-31
+2020,Wisconsin,Emerson,2020-10-29,2020-10-30,53,45,751,LV,https://www.realclearpolitics.com/epolls/2020/president/Wisconsin.html,2026-10-31
+2020,Georgia,Emerson,2020-10-29,2020-10-31,48,49,749,LV,https://www.realclearpolitics.com/epolls/2020/president/Georgia.html,2026-10-31
+2024,Pennsylvania,The Hill/Emerson,2024-10-30,2024-11-02,48,49,,,https://www.realclearpolling.com/polls/battlegrounds/2024,2026-10-31
+2024,Wisconsin,The Hill/Emerson,2024-10-29,2024-11-02,49,49,,,https://www.realclearpolling.com/polls/battlegrounds/2024,2026-10-31
+2024,Georgia,The Hill/Emerson,2024-10-29,2024-11-02,49,50,,,https://www.realclearpolling.com/polls/battlegrounds/2024,2026-10-31
