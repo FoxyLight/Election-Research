@@ -45,3 +45,11 @@ A Georgia SOS 2016 official statewide summary prints 4,092,373 votes across thre
 **Blocked source:** original final-week vote-share poll CSVs are not yet extracted across all three cycles. Big 538 pollster-rating raw files exceed the file-content tool's read limit; old hosted CSV URLs failed this session.
 
 **Decision:** Freeze only signed error and outcome denominator/candidate-share preservation conventions; keep final-14-day field-end cutoff, poll-question matching and de-duplication rules **provisional** until we can inspect a real final-window poll dataset. See [Pilot 02](pilot-02.md) and [Methodology v0.1](methodology-v0.1.md). No H1–H6 test.
+
+## 2026-10-31 — Late Pilot 02: full 2020 presidential poll mirror and final14 questions
+
+The GitHub blob endpoint successfully returned the exact 5,545,063-byte historical [2020 FiveThirtyEight data mirror](https://github.com/simonw/fivethirtyeight-polls/blob/main/president_polls.csv) (blob `cbe565b7647059de8b58414e420d2b8587250cc6`), where ordinary file content retrieval was empty. Parsing 16,438 answer rows produced 175 Biden/Trump question pairs satisfying state GA/PA/WI, presidential general, field end 1–14 days before 2020-11-03. Distinct poll IDs by state: Pennsylvania 55, Wisconsin 34, Georgia 32. Fourteen paired questions have blank methodology.
+
+Original Marquette Law School 2020 Wisconsin October 21–25 LV and RV toplines were verified: question IDs 135295 and 135296, poll ID 72151; respectively Biden/Trump 48/43 with 749 LV and 47/43 with 806 RV. These are distinct subsets of **the same poll**, not independent samples.
+
+Committed [175 paired questions](../data/processed/pilot_2020_final14_paired_questions.csv), [blob-verified extraction recipe](../analysis/extract_2020_final14_pairs.py), and [provenance/limits addendum](pilot-02-poll-data-addendum.md). Question-level extraction performed against full blob through data-processing tools; **the Python extraction recipe has not been executed on the 5.5MB source in a local checkout**. A 2024 final-week source and a comparable 2016 field-end-date source remain outstanding. Previous 2020 access-block note was a snapshot from before using blob retrieval. No H1–H6 tests conducted.
