@@ -1,7 +1,9 @@
+> **Late discovery update, 2026-10-31:** This report was written before successful retrieval of the 2020 historical FiveThirtyEight mirror. Section 6's earlier access-block statements are historical. **175 final-fourteen-day Biden/Trump question pairs have now been extracted for Georgia, Pennsylvania and Wisconsin.** See the [Pilot 02 polling-data addendum](pilot-02-poll-data-addendum.md) and [2020 dataset](../data/processed/pilot_2020_final14_paired_questions.csv). The 2016 and 2024 equivalent data remain unacquired. No broad polling-error trend analysis has been conducted.
+
 # Pilot 02 — official-result completion, poll-file acquisition, reproducibility
 
 **Review date:** 2026-10-31  
-**Status:** **PASS** on official-result coverage and comparison calculation reproduction; **PARTIAL** on machine-readable poll acquisition for final-window research. No inferential statistical analysis or H1–H6 hypothesis tests conducted.
+**Status:** **PASS** on nine official-result records, calculation reproduction, and the 2020 three-state final-window question-data acquisition; **PARTIAL** on original-poll validation and cross-cycle 2016/2024 acquisition. No inferential statistical analysis or H1–H6 hypothesis tests conducted.
 
 ## 1. Official 2016 source reconciliation
 
@@ -88,4 +90,4 @@ Attempted: FiveThirtyEight hosted `president_polls.csv` and `president_polls_his
 
 The outcome vote denominator, major-party signed-margin definition, official source priority, raw-source preservation, and source-version/hash logging are documented in [preliminary methodology v0.1](methodology-v0.1.md). The *proposed* final 1–14-day field-end window and de-duplication policy remain provisional pending a poll-level file audit.
 
-**Next recommended activity: Pilot 03, polling preference data acquisition.** Retrieve a verified last-fourteen-day source with **candidate vote share, question/matchup, geography, field end date, pollster**, and ideally poll/question identifiers, mode and population, for at least one of the three historical cycles. Check one source against several original pollster reports, confirm license/provenance, and document coverage/duplicate handling before broad statistical modeling. If access remains blocked, test suitable licensed alternatives rather than silently changing the research question.
+**Updated next activity: Pilot 03, complete cross-cycle and original-report validation.** The [2020 addendum](pilot-02-poll-data-addendum.md) now documents 175 selected final-14-day Biden/Trump question pairs with poll/question IDs and other key fields. First reproduce the extract in Python using the exact historical mirror; check more questions against original pollster reports and establish a consistent sample-selection policy. Then acquire equivalent final-window vote-share datasets for 2016 and 2024, preserving candidate matchups. Do not conduct broad statistical modeling until these steps pass.
