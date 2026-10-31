@@ -1,3 +1,5 @@
+> **Historical pilot note (2026-10-31):** This document includes dated source-audit snapshots from before all certified result totals were obtained. **The latest authoritative nine-row table and 9/9 official-count status are in [Pilot 02](pilot-02.md).** The `pilot_margin_errors.csv` file has been updated and verified. Read preliminary status counts below as historical, not current.
+
 # Pilot 01 — nine state-year polling comparisons
 
 **Date:** 2026-10-31  
