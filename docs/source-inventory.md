@@ -33,3 +33,13 @@
 ## Audit procedure for each candidate file
 
 Record URL, publisher, download timestamp (UTC), file version/hash, data license, election years, contests, geographic identifiers, field-date definition, candidate mapping, sample population, denominator definition, missingness, duplicate rules, number of rows before/after filters and any known revisions. Do not label a dataset usable until its content has been opened and inspected.
+
+## 2026-10-31 Pilot 01 follow-up: archives actually inspected
+
+- **RCP 2016**: [2016 presidential battleground final tables](https://www.realclearpolitics.com/epolls/2016/president/2016StateFinalResults.html) expose 2016 GA/PA/WI candidate percentages, final averages, field-date windows and selected poll entries. **Verified HTML-level records; dataset-level CSV download not established.**
+- **RCP 2020**: [PA](https://www.realclearpolitics.com/epolls/2020/president/Pennsylvania.html), [WI](https://www.realclearpolitics.com/epolls/2020/president/Wisconsin.html) and [GA](https://www.realclearpolitics.com/epolls/2020/president/Georgia.html) provide analogous summary rows and some sampled poll field dates/populations. **Verified HTML-level records.**
+- **RCP 2024**: [2024 battleground final table](https://www.realclearpolling.com/polls/battlegrounds/2024) provides final averages and poll entries in all three pilot states. The combined table does **not** expose sample size/population for selected polls. **Verified HTML-level records.**
+- **FEC 2024**: [2024 presidential certified counts PDF](https://www.fec.gov/documents/5644/2024presgeresults.pdf) pp. 3, 5, 6, visually examined for candidate counts and full-state presidential vote totals for GA, PA and WI. **Verified numerical observations for all three pilot states.**
+- **Pennsylvania 2020 official record**: [Department of State fact-check page](https://www.pa.gov/agencies/vote/elections/fact-checking-pa-related-election-claims) explicitly gives certified candidate totals and 6,915,283 total presidential votes. **Verified numerical observations.**
+
+See [Pilot 01](pilot-01.md) for provenance and gaps. RCP's retrospective `Final Results` row is *not* an acceptable permanent substitute for official counts; check denominator differences before producing aggregate historical statistics.
